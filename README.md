@@ -23,7 +23,7 @@ Download Git as Terminal on Windows does not by default have git installed unlik
 
 > Go to the repository and press the green "Code" button at the top right.  
 > Copy the URL.  
-> Open Terminal (CMD+Space and search for Terminal).  
+> Open Terminal (CMD+Space and search for Terminal). Make sure you're in the folder in which you want your Paperpile-Notion project to be. 
 > Run ```git clone <repository-URL>```.
 
 3. The ```origin``` remote will link to this github instead of yours so you need to change this.
@@ -90,6 +90,11 @@ Download Git as Terminal on Windows does not by default have git installed unlik
 
 #### Now to the last part! Where it hopefully all comes together! 
 12. ```Pull``` your new references.bib file from Github. To do this, use ```git pull origin main``` in Terminal. 
+
+Windows extra steps
+- You won't have some of the packages installed (might be applicable to Mac too):
+> pip install pybtex  
+> pip install jsonmerge
 
 13. Run ```python3 paperpile_api.py```. This should show at the end "X entries successfully added to Notion!" and you should also see these entries in your Notion table. If you're getting errors, I'm sorry and godspeed on your debugging journey. It means I was not able to save you from the headaches. If it worked, then yay!! 
 
