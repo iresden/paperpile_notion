@@ -14,6 +14,10 @@ There are 3 big elements we are working with:
 ## INSTRUCTIONS
 
 #### First, we will start with Github.
+
+Extra step for Windows:
+Download Git as Terminal on Windows does not by default have git installed unlike Linux/Mac ````https://git-scm.com/downloads/win````. Run through the installation and make sure to select _“Git from the command line and also from 3rd-party software”_ when prompted (this is already the recommended option). Then you can open Terminal on Windows and run ````git --version```` to check it is intalled. 
+
 1. Make a new repository.
 2. Open terminal and clone this repo to yours (it should hopefully have all the tutorial data as I started by cloning the Notion tutorial repo).
 
