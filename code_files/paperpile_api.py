@@ -49,7 +49,7 @@ for page_num in range(b + 1):
 print('There are ' + str(len(existing_titles)) + ' existing entries on Notion.\n')
 
 parser = bibtex.Parser()
-bibdata = parser.parse_file("references.bib")
+bibdata = parser.parse_file("../references.bib")
 
 count = 0
 for bib_id in bibdata.entries:
@@ -69,7 +69,11 @@ for bib_id in bibdata.entries:
     elif 'archivePrefix' in bibdata.entries[bib_id].fields:
         journal_name = bibdata.entries[bib_id].fields['archivePrefix']
 
-    year_pub = bibdata.entries[bib_id].fields['year']
+    try:
+        year_pub = b.fields['year']
+    except KeyError:
+        print(f"Skipping entry '{bib_id}': missing 'year' field.")
+        continue  # Skip entries missing 'year'
 
     if len(author_list) > 2:
         auth_year = first_author[:-4] + ' et. al.,' + year_pub
