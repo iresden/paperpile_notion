@@ -91,6 +91,11 @@ Download Git as Terminal on Windows does not by default have git installed unlik
 #### Now to the last part! Where it hopefully all comes together! 
 12. ```Pull``` your new references.bib file from Github. To do this, use ```git pull origin main``` in Terminal. 
 
+Windows extra steps
+- You won't have some of the packages installed (might be applicable to Mac too):
+> pip install pybtex  
+> pip install jsonmerge
+
 13. Run ```python3 paperpile_api.py```. This should show at the end "X entries successfully added to Notion!" and you should also see these entries in your Notion table. If you're getting errors, I'm sorry and godspeed on your debugging journey. It means I was not able to save you from the headaches. If it worked, then yay!! 
 
 #### Whenever you add new references to Paperpile, the _references.bib_ file will be automatically updated in your Github (you will be able to see this in the _Commits_ as 'Paperpile-bot updated references.bib'. However, this does not carry into updating your Notion. I'm sure someone with actual Computer Science knowledge would be able to do this somehow but for now, you get this because a tired biologist wrote it instead. 
